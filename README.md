@@ -21,7 +21,9 @@ This repo contains a minimal, working example of using Ansible to automate netwo
 
 
 1. Clone the repo to your controller machine.
+   
 2. Ensure managed nodes have Python 3 and SSH enabled.
+   
 3. Generate an SSH key on the controller and copy it to managed nodes:
 
 
