@@ -1,0 +1,8 @@
+# DNS group variables
+dns_zone: example.local
+dns_zone_file: /etc/bind/db.example.local
+dns_soa_email: hostmaster.example.local.
+ns_record: ns1.example.local.
+a_records:
+- { name: "ns1", ip: "192.168.24.20" }
+- { name: "www", ip: "192.168.24.20" }
