@@ -1,0 +1,16 @@
+---
+- name: Ensure deploy user exists
+user:
+name: deploy
+comment: "Deployment user"
+groups: sudo
+shell: /bin/bash
+create_home: yes
+state: present
+
+
+- name: Add authorized key for deploy user
+authorized_key:
+user: deploy
+state: present
+key: "{{ lookup('file', '/home/YOUR_LOCAL_USER/.ssh/id_ed25519_ansible.pub') }}"
