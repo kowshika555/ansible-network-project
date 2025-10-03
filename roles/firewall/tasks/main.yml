@@ -1,0 +1,32 @@
+---
+- name: Install ufw
+apt:
+name: ufw
+state: present
+update_cache: yes
+
+
+- name: Allow SSH
+ufw:
+rule: allow
+name: OpenSSH
+
+
+- name: Allow DNS ports (tcp/udp 53)
+ufw:
+rule: allow
+port: '53'
+proto: 'tcp'
+
+
+- name: Allow DNS UDP (port 53)
+ufw:
+rule: allow
+port: '53'
+proto: 'udp'
+
+
+- name: Enable UFW (set default incoming deny)
+ufw:
+state: enabled
+policy: deny
