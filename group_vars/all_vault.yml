@@ -1,0 +1,3 @@
+# Example vaulted variables (encrypt this file with ansible-vault)
+# vault_ssh_private_key_path: /path/to/private/key
+# some_api_key: "REPLACE_ME"
