@@ -1,0 +1,23 @@
+---
+- hosts: all
+become: true
+gather_facts: true
+roles:
+- role: users
+tags: [users]
+
+
+- hosts: dns_servers
+become: true
+gather_facts: true
+roles:
+- role: bind
+tags: [bind]
+
+
+- hosts: firewalls
+become: true
+gather_facts: true
+roles:
+- role: firewall
+tags: [firewall]
