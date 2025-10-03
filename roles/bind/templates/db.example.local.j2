@@ -1,0 +1,12 @@
+$TTL 604800
+@ IN SOA {{ ns_record }} {{ dns_soa_email }} (
+2 ; serial - increment for updates
+604800 ; refresh
+86400 ; retry
+2419200 ; expire
+604800 ) ; negative caching
+;
+@ IN NS {{ ns_record }}
+{% for rec in a_records %}
+{{ rec.name }} IN A {{ rec.ip }}
+{% endfor %}
