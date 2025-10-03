@@ -1,0 +1,5 @@
+// named.conf.local - managed by Ansible
+zone "{{ dns_zone }}" {
+type master;
+file "{{ dns_zone_file }}";
+};
